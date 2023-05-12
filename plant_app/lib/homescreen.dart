@@ -1,8 +1,9 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:plant_app/productlist.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -68,7 +69,7 @@ class _HomeScreenState extends State<HomeScreen> {
               Row(
                 children: [
 
-                  SizedBox(height: 70,),
+                  SizedBox(height: 150,),  //70 By Default
 
                   Padding(
                     padding: const EdgeInsets.all(8.0),
@@ -81,6 +82,35 @@ class _HomeScreenState extends State<HomeScreen> {
 
                 ],
               ),
+
+              Container(
+                padding: EdgeInsets.only(left: 10),
+                width: MediaQuery.of(context).size.width - 130,
+                alignment: Alignment.centerLeft,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+
+                    Text(
+                      "Green",
+                      style: TextStyle(
+                        color: Colors.grey,
+                        fontSize: 18,
+                      ),
+                    ),
+
+                    Text(
+                      "Plants",
+                      style: TextStyle(
+                        fontSize: 30,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+
+              ProductList(),
 
             ],
           ),
