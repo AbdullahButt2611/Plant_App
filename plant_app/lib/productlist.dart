@@ -10,13 +10,28 @@ class ProductList extends StatelessWidget {
   final textstyle = TextStyle(fontSize: 25, color: Colors.black, fontWeight: FontWeight.w700);
   final textsubstyle = TextStyle(fontSize: 20, color: Colors.grey);
 
-  List data = [
-    
-  ];
+  
 
   @override
   Widget build(BuildContext context) {
+    return 
+    
+    Column(
+      children: [
+
+        productstyle(context, 'assets/plant1.png'),
+
+        productstyle(context, 'assets/pant2.png'),
+
+      ]
+    );
+  }
+
+
+  productstyle(BuildContext context, image){
+
     return Container(
+
       padding: EdgeInsets.only(left: 10),
       alignment: Alignment.centerLeft,
       width: MediaQuery.of(context).size.width - 130,
@@ -25,7 +40,7 @@ class ProductList extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Image.asset(
-            "assets/plant1.png",
+            image,
             fit: BoxFit.contain,
           ),
 

@@ -64,56 +64,59 @@ class _HomeScreenState extends State<HomeScreen> {
 
           ),
           
-          Column(
-            children: [
+          SingleChildScrollView(
 
-              Row(
-                children: [
+            child: Column(
+              children: [
 
-                  SizedBox(height: 150,),  //70 By Default
-
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Container(
-                      width: MediaQuery.of(context).size.width - 130,
-                      alignment: Alignment.centerRight,
-                      child: Icon(Icons.search_outlined, size: 40,)
-                    ),
-                  ),
-
-                ],
-              ),
-
-              Container(
-                padding: EdgeInsets.only(left: 10),
-                width: MediaQuery.of(context).size.width - 130,
-                alignment: Alignment.centerLeft,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.start,
+                Row(
                   children: [
 
-                    Text(
-                      "Green",
-                      style: TextStyle(
-                        color: Colors.grey,
-                        fontSize: 18,
+                    SizedBox(height: 150,),  //70 By Default
+
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Container(
+                        width: MediaQuery.of(context).size.width - 130,
+                        alignment: Alignment.centerRight,
+                        child: Icon(Icons.search_outlined, size: 40,)
                       ),
                     ),
 
-                    Text(
-                      "Plants",
-                      style: TextStyle(
-                        fontSize: 30,
-                      ),
-                    ),
                   ],
                 ),
-              ),
 
-              ProductList(),
+                Container(
+                  padding: EdgeInsets.only(left: 10),
+                  width: MediaQuery.of(context).size.width - 130,
+                  alignment: Alignment.centerLeft,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
 
-            ],
+                      Text(
+                        "Green",
+                        style: TextStyle(
+                          color: Colors.grey,
+                          fontSize: 18,
+                        ),
+                      ),
+
+                      Text(
+                        "Plants",
+                        style: TextStyle(
+                          fontSize: 30,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+
+                ProductList(),
+
+              ],
+            )
           ),
 
         ],
