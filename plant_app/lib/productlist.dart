@@ -1,22 +1,66 @@
-// ignore_for_file: prefer_const_literals_to_create_immutables
+// ignore_for_file: prefer_const_literals_to_create_immutables, use_key_in_widget_constructors, prefer_const_constructors
 
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
 class ProductList extends StatelessWidget {
-  const ProductList({super.key});
+
+  final textstyle = TextStyle(fontSize: 25, color: Colors.black, fontWeight: FontWeight.w700);
+  final textsubstyle = TextStyle(fontSize: 20, color: Colors.grey);
+
+  List data = [
+    
+  ];
 
   @override
   Widget build(BuildContext context) {
     return Container(
+      padding: EdgeInsets.only(left: 10),
+      alignment: Alignment.centerLeft,
       width: MediaQuery.of(context).size.width - 130,
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Image.asset(
             "assets/plant1.png",
             fit: BoxFit.contain,
-          )
+          ),
+
+          Text(
+            "Turf pot plant",
+            style: textstyle,
+          ),
+
+          SizedBox(height: 5,),
+
+          Text(
+            "Big leaf plant in a turf pot for your home or office decor",
+            style: textsubstyle,
+          ),
+
+          SizedBox(height: 10,),
+
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+
+              Text(
+                "Rs 4,500",
+                style: textstyle,
+              ),
+
+              IconButton(
+                padding: EdgeInsets.zero,
+                icon: Icon(Icons.add_circle, size: 40,),
+                onPressed: (){},
+              ),
+
+            ],
+          ),
+
         ],
       ),
 
