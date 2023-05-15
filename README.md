@@ -1,7 +1,3 @@
-<p align="center">
-  <img src = "#" width="300">
-</p>
-
 <h1 align="center">
   Plant App
 </h1>
